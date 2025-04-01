@@ -1,0 +1,12 @@
+user:
+  name: user
+  useCsv: 1
+  password: 123456test
+
+datebase:
+  dsn: root:235813xYf@tcp(127.0.0.1:3306)/go?charset=utf8mb4&parseTime=True&loc=Local
+  MaxIdleConns: 10
+  MaxOpenConns: 100
+
+csv:
+  savePath:
