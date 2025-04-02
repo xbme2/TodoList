@@ -22,7 +22,8 @@ var rootCmd = &cobra.Command{
 
 func Execute() {
 	rootCmd.AddCommand(addCommand)
-	addCommand.Flags().StringArrayP("name", "s", []string{}, "任务主题") // 添加短标志 -s
+	rootCmd.AddCommand(showCommand)
+	addCommand.Flags().StringArrayP("name", "n", []string{}, "任务主题") // 添加短标志 -s
 	addCommand.Flags().StringArrayP("deadline", "d", []string{}, "截止日期")
 	addCommand.Flags().StringArrayP("level", "l", []string{}, "关键程度")
 	// addCommand.Flags().Str

@@ -4,6 +4,7 @@ import (
 	"log"
 
 	"github.com/spf13/viper"
+	"main.go/global"
 )
 
 type Config struct {
@@ -11,6 +12,7 @@ type Config struct {
 		Name     string
 		UseCsv   int
 		Password string
+		Calendar global.CalendarService
 	}
 	Database struct {
 		Dsn          string

@@ -15,6 +15,31 @@ func NewTask(id string, name string, deadline string, level global.ImportanceTyp
 	}
 }
 
+// func createGoogleCalendarEvent() {
+// 	// 加载认证信息
+// 	ctx := context.Background()
+// 	clientSecret := "path_to_your_credentials.json"
+
+// 	b, err := os.ReadFile(clientSecret)
+// 	if err != nil {
+// 		log.Fatalf("Unable to read client secret file: %v", err)
+// 	}
+
+// 	// 获取 Google API 认证
+// 	config, err := google.ConfigFromJSON(b, calendar.CalendarScope)
+// 	if err != nil {
+// 		log.Fatalf("Unable to parse client secret file to config: %v", err)
+// 	}
+
+// 	client := getClient(config)
+
+// 	// 创建 Calendar 服务客户端
+// 	srv, err := calendar.NewService(ctx, option.WithHTTPClient(client))
+// 	if err != nil {
+// 		log.Fatalf("Unable to retrieve Calendar client: %v", err)
+// 	}
+// }
+
 func AddTask(tasks []*model.Task, useCsv bool) {
 	if useCsv {
 		// 使用CSV存储数据

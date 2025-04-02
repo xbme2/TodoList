@@ -27,3 +27,17 @@ func WriteCSV(task *model.Task, csvFile string) {
 	}
 	writer.Write(line)
 }
+
+func ReadCsv(csvFile string) [][]string {
+	file, err := os.OpenFile(csvFile, os.O_RDONLY, 0644)
+	if err != nil {
+		log.Fatalf(err.Error())
+	}
+	defer file.Close()
+	reader := csv.NewReader(file)
+	tasks, err := reader.ReadAll()
+	if err != nil {
+		log.Fatalf(err.Error())
+	}
+	return tasks
+}

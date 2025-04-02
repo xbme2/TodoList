@@ -2,6 +2,7 @@ user:
   name: user
   useCsv: 1
   password: 123456test
+  Calendar: 0
 
 datebase:
   dsn: root:#password@tcp(127.0.0.1:3306)/go?charset=utf8mb4&parseTime=True&loc=Local

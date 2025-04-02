@@ -39,7 +39,6 @@ var addCommand = &cobra.Command{
 		if tasks == nil {
 			log.Fatalf(" tasks is nil")
 		}
-		fmt.Println(tasks[1].Name)
 		service.AddTask(tasks, true)
 	},
 }
